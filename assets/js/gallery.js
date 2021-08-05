@@ -72,7 +72,7 @@ Gallery.prototype.fetchData = function(){
     self.data = data;
     // console.log(data);
     for(let d in data){
-      self.parent.children[0].innerHTML += `<img draggable="false" src="/assets/images/${data[d]['image']}" alt="">`;
+      self.parent.children[0].innerHTML += `<img draggable="false" src="assets/images/${data[d]['image']}" alt="">`;
       self.list.innerHTML += `<div></div>`;
       linkimg.innerHTML += `<p>${data[d]['linkImg']}</p>`
     }
@@ -80,7 +80,7 @@ Gallery.prototype.fetchData = function(){
     self.content.children[1].innerHTML = self.data[0]['description'];
     self.list.children[0].classList.add('active');
   }
-  xhttp.open('GET','/assets/json/career.json');
+  xhttp.open('GET','https://api.jsonbin.io/b/610b7c5be1b0604017a6e9f6');
   xhttp.send();
 }
 Gallery.prototype.clearList = function(){
