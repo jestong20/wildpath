@@ -55,7 +55,7 @@ Article.prototype.init = function(){
         });
         
     }
-    this.xhttp.open('GET','/assets/json/articles.json');
+    this.xhttp.open('GET','https://api.jsonbin.io/b/610b7c16f098011544ab8a04',true);
     this.xhttp.send();
 }
 Article.prototype.open = function(data){
@@ -65,7 +65,7 @@ Article.prototype.open = function(data){
     this.content.innerHTML = 
     `<div>
         <h3>${data.name}</h3>
-        <img id="btn-article-close" src="../assets/images/icon/x.svg" alt =""/>
+        <img id="btn-article-close" src="assets/images/icon/x.svg" alt =""/>
     </div>
     <div id="article-author">
         By ${data.author}
